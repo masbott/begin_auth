@@ -67,6 +67,17 @@ class Twitter extends CI_Controller
 	 */
 	public function auth()
 	{
+
+		require('twitteroauth.php');
+
+		print_r(require('twitteroauth.php'));exit();
+
+		session_start();
+
+		$statuses = $connection->get("statuses/home_timeline", ["count" => 25, "exclude_replies" => true]);
+
+		// print_r( $access_token );exit();
+
 		$this->load->library('session');
 		if($this->session->userdata('access_token') && $this->session->userdata('access_token_secret'))
 		{

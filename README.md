@@ -2,11 +2,6 @@
 Traditional and social authorization application.
 
 
-Demo
-----
-http://demo01.localtom.com/
-
-
 Installation
 ------------
 * Upload files to your web server or local server.
